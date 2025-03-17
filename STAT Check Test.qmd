@@ -1,0 +1,38 @@
+---
+title: "STAT Check Test"
+author: "Justin C. Eldridge"
+format: pdf
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+install.packages("statcheck")
+library(statcheck)
+```
+
+Try it on a raw text string as a test
+```{r}
+txt <- "blablabla the effect was very significant (t(48) = 1.02, p < .05)"
+statcheck(txt)
+```
+
+Try it on a pdf
+
+```{r}
+#Try setting the working directory
+
+
+checkPDF("C:\\Users\\justi\\Zotero\\storage\\CI9MMMSD\\Nissen et al. - 2006 - Effect of Very High-Intensity Statin Therapy on Re.pdf")
+```
+
+
+
+
