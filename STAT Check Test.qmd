@@ -19,6 +19,7 @@ library(statcheck)
 ```
 
 Try it on a raw text string as a test
+
 ```{r}
 txt <- "blablabla the effect was very significant (t(48) = 1.02, p < .05)"
 statcheck(txt)
@@ -32,7 +33,3 @@ Try it on a pdf
 
 checkPDF("C:\\Users\\justi\\Zotero\\storage\\CI9MMMSD\\Nissen et al. - 2006 - Effect of Very High-Intensity Statin Therapy on Re.pdf")
 ```
-
-
-
-
