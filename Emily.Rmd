@@ -3,4 +3,4 @@ title: "Emily"
 output: html_document
 ---
 
-This is Emily's file where she's testing testing testing
+This is Emily's file where she's testing testing testing. Emily only, no one else is allowed. 
