@@ -31,5 +31,5 @@ Try it on a pdf
 #Try setting the working directory
 
 
-checkPDF("C:\\Users\\justi\\Zotero\\storage\\CI9MMMSD\\Nissen et al. - 2006 - Effect of Very High-Intensity Statin Therapy on Re.pdf")
+checkPDF("\\Test PDFs\\Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba")
 ```
