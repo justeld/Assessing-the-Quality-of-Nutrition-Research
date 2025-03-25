@@ -1,0 +1,1187 @@
+Articles
+
+Burden of valvular heart diseases: a population-based study
+Vuyisile T Nkomo, Julius M Gardin, Thomas N Skelton, John S Gottdiener, Christopher G Scott, Maurice Enriquez-Sarano
+
+Background Valvular heart diseases are not usually regarded as a major public-health problem. Our aim was to assess
+their prevalence and eﬀect on overall survival in the general population.
+Methods We pooled population-based studies to obtain data for 11 911 randomly selected adults from the general
+population who had been assessed prospectively with echocardiography. We also analysed data from a community
+study of 16 501 adults who had been assessed by clinically indicated echocardiography.
+Findings In the general population group, moderate or severe valve disease was identiﬁed in 615 adults. There was no
+diﬀerence in the frequency of such diseases between men and women (p=0·90). Prevalence increased with age, from
+0·7% (95% CI 0·5–1·0) in 18–44 year olds to 13·3% (11·7–15·0) in the 75 years and older group (p<0·0001). The
+national prevalence of valve disease, corrected for age and sex distribution from the US 2000 population, is 2·5%
+(2·2–2·7). In the community group, valve disease was diagnosed in 1505 (1·8% adjusted) adults and frequency
+increased considerably with age, from 0·3% (0·2–0·3) of the 18–44 year olds to 11·7% (11·0–12·5) of those aged
+75 years and older, but was diagnosed less often in women than in men (odds ratio 0·90, 0·81–1·01; p=0·07). The
+adjusted mortality risk ratio associated with valve disease was 1·36 (1·15–1·62; p=0·0005) in the population and 1·75
+(1·61–1·90; p<0·0001) in the community.
+Interpretation Moderate or severe valvular diseases are notably common in this population and increase with age. In
+the community, women are less often diagnosed than are men, which could indicate an important imbalance in view
+of the associated lower survival. Valve diseases thus represent an important public-health problem.
+
+Introduction
+In the past, valvular heart diseases were typically caused by
+rheumatic heart disease, which remains a major burden in
+developing countries.1 However, in industrialised countries,
+rheumatic disease has fallen substantially,1,2 and residual
+valvular diseases are now mostly degenerative3–8 and are not
+regarded as a major public-health problem. The low
+number of valve replacements, by comparison with
+coronary bypass surgery,9 and the low mortality attributed
+to valve diseases in the USA lend support to this view.10
+However, several facts suggest that the role of valve
+disease as a public-health problem should be reconsidered.
+Valve diseases are poorly represented in the international
+classiﬁcation of diseases, and their contribution to mortality
+and morbidity might have been ignored without
+echocardiography. Also, the results of the EuroHeart
+Survey11 suggest that a substantial burden of such disease
+exists, at least in Europe, a situation that is lent support by
+the link between degenerative valve disease, older age,3–8
+and increasing life expectancy.12
+Nevertheless, the burden of valve diseases is unknown
+because previous studies have focused mostly on hospital
+patients11 and because assessment of valve diseases is
+clinically imprecise13 and requires large samples with
+echocardiography. Seminal echocardiographic studies
+reported some data for valve disease prevalence.6,14–16
+Although these and observational17 studies suggest a link
+to ageing, the absolute prevalence in speciﬁc age groups
+and comprehensive burden of valve diseases are unknown.
+Furthermore, in the community—a population that can
+inform us about diseases that are of potential concern—
+the rates of diagnosed valve diseases are unknown.
+www.thelancet.com Vol 368 September 16, 2006
+
+We postulated that valvular diseases are highly prevalent
+and are a public-health problem. Thus, our aim was to
+assess the prevalence, distribution patterns, and
+consequences of noteworthy (moderate or severe)
+left-sided valve disease in the general population and in
+the community.
+
+Lancet 2006; 368: 1005–11
+Published Online
+August 18, 2006
+DOI:10.1016/S01406736(06)69208-8
+See Comment page 969
+Mayo Clinic, Rochester, MN,
+USA (V T Nkomo MD,
+C G Scott MS,
+Prof M Enriquez-Sarano MD);
+St John Medical Center, Detroit,
+MI, USA
+(Prof J M Gardin MD); University
+of Mississippi Medical Center,
+Jackson, MS, USA
+(Prof T N Skelton MD); and
+University of Maryland,
+Baltimore, MA, USA
+(Prof J S Gottdiener MD)
+Correspondence to:
+Prof Maurice Enriquez-Sarano,
+Division of Cardiovascular
+Diseases and Internal Medicine,
+Mayo Clinic, Rochester,
+MN 55905, USA
+sarano.maurice@mayo.edu
+
+Methods
+Study population
+The National Heart, Lung, and Blood Institute (NHLBI)
+organises the gathering of data from large
+epidemiological studies with well-characterised
+population samples. From this database, we selected
+studies with prospectively deﬁned echocardiographic
+valvular analysis. Echocardiography with comprehensive,
+speciﬁc valvular analysis was done prospectively in three
+large national population-based epidemiological
+studies—the Coronary Artery Risk Development in
+Young Adults (CARDIA) Study,18 the Atherosclerosis
+Risk in Communities (ARIC) Study,19 and the
+Cardiovascular Health Study (CHS).20 All these studies
+had strictly deﬁned criteria; technical approaches,
+design, rationale, and selection criteria were much the
+same, and all participants were randomly selected from
+the population.
+The NHLBI included 5115 participants aged 18–30 years
+who had been recruited in 1985–86 from the CARDIA
+Study (46% black, 54% white), 15 792 participants aged
+45–64 years recruited between 1987 and 1989 in the ARIC
+Study (26% black, 72% white), and 5888 participants aged
+65 years and older recruited between 1989 and 1992 (16%
+black, 84% white) in CHS. Echocardiographs were
+1005
+
+Articles
+
+1006
+
+obtained in 1989–92 from 4351 CARDIA and 5125 CHS
+participants, and in 1994–96 from 2435 ARIC participants.
+We assessed these 11 911 individuals from the NHLBI
+studies as our sample of the general US population. We
+reviewed the original prospectively deﬁned echocardiographic criteria for valve diseases and data sets
+were merged. The participant population was diverse for
+age, sex, and race (40% black, 59% white, and 1% other)
+and by design oversampled the elderly population
+compared with the general population. The study was
+approved by the Mayo Clinic Institutional Review Board.
+Community studies, by contrast with systematic
+samples of the general population, analyse diseases as
+they are diagnosed in the population. The Mayo Clinic
+(Rochester, MN, USA) is the sole provider of
+echocardiographic services in Olmsted County. The
+Rochester epidemiology project allows information
+about all clinical cases of valve disease in Olmsted
+County to be obtained through a medical-records linkage
+system that encompasses care delivered to residents of
+Rochester and Olmsted County by the Mayo Clinic and
+other providers in the community.21 More than 90% of
+the population of Olmsted County has at least one
+medical contact in every 3-year period with these
+providers.21 The demographic characteristic of Olmsted
+County from the 2000 census was 2·7% black and 90·3%
+white. Echocardiographs done in 1990–2000 of adult
+Olmsted County residents 18 years or older were
+obtained, unless they had previously denied research
+authorisation in accordance with Minnesota law or if
+they were incarcerated in the federal medical centre. To
+estimate the prevalence of valve diseases in the
+community, residents with moderate or more severe
+valve disease who were alive in January, 2000, were
+retained. The echocardiograph closest to January, 2000,
+was used when more than one was available. We
+examined the outcome in residents diagnosed with valve
+disease between 1990 and 1995 to determine the eﬀect of
+the presence of such conditions on survival.
+
+In the Olmsted County community, valvular stenosis
+assessment was made on the basis of quantitative criteria.
+Moderate or more severe valve stenosis (aortic and mitral)
+was diagnosed if valve area was smaller or equal to
+1·5 cm², as determined by doppler measurement.27
+Colour doppler was used to assess presence and severity
+of aortic24 and mitral regurgitation.25 Quantitative
+regurgitation measures were in development during the
+study period and, where done, were integrated into the
+grading of mitral and aortic valve regurgitation severity.26
+
+Procedures
+
+Role of the funding source
+
+Prospectively deﬁned diagnostic criteria, which formed
+part of the study protocols, were much the same in the
+three population-based studies. Judicious, comprehensive
+assessment was applied to ensure that all clinically
+signiﬁcant valve diseases were noted. Speciﬁcally,
+valvular stenosis of moderate or high severity was judged
+present if valve leaﬂet motion was obviously limited or if
+increased ﬂow velocity across the valve suggested such a
+degree of stenosis.22,23 Detection and gradation of valvular
+regurgitation was made on the basis of standard colour
+doppler criteria for aortic regurgitation (width of
+regurgitant colour jet area half or more of the width of
+the left ventricular outﬂow tract)24 and mitral regurgitation
+(maximum displacement of atrial area by regurgitant
+colour ﬂow jet equal or greater than a third in any view),25
+in agreement with current guidelines.26
+
+The NHLBI designed the population studies, was made
+aware of the analysis done by the investigators, but did
+not inﬂuence data analysis and interpretation. The
+investigators designed this study and did the analysis
+and interpretation. The corresponding author had full
+access to all the data in the study and had ﬁnal
+responsibility for the decision to submit for publication.
+
+Statistical analysis
+We calculated the ratio of participants aﬀected to those
+examined to estimate age-speciﬁc and sex-speciﬁc
+frequencies of valve diseases in the sampled population.
+Age-speciﬁc and sex-speciﬁc valve disease rates were
+compared between groups with Z scores; we tested for
+trends across age groups with the Cochran-Armitage test.
+Because the epidemiological studies oversampled older
+participants, the national prevalence of valvular heart
+diseases was estimated by adjustment of participant
+frequencies with data from the US 2000 population
+census. 95% CIs were calculated with Poisson standard
+errors. Logistic regression was done to test the association
+of sex and age with the presence of valve disease. We
+analysed the echo doppler and morphological (left
+ventricular and atrial) alterations associated with every
+valve disease and tested for signiﬁcance with the Wilcoxon
+rank-sum test. Survival after diagnosis was estimated by
+the Kaplan-Meier method. Comparisons of survival
+between population-based participants with and without
+valve disease were done with the two-sample log-rank
+test and were adjusted for age, sex, left ventricular
+ejection fraction, hypertension, diabetes, and coronary
+artery disease with the Cox’s proportional hazards model.
+Survival after diagnosis in community residents was
+compared with that of Minnesota white population,
+matched for age and sex, and tested with one-sample
+log-rank test. All p values were two-tailed.
+
+Results
+There were 11 911 echocardiographs in the pooled
+population-based studies. The number of adult residents
+of Olmsted County alive in January, 2000, with available
+echocardiographs was 16 501, which represents 18·6%
+of the adult population of Olmsted County.
+In the population-based studies, valvular heart disease
+was present in 615 (5·2%, 95% CI 4·8–5·6) participants.
+www.thelancet.com Vol 368 September 16, 2006
+
+Articles
+
+Age (years)
+
+p value
+for trend
+
+18–44
+
+45–54
+
+55–64
+
+Participants (n)
+
+4351
+
+696
+
+Male, n (%)
+
+1959 (45%)
+
+258 (37%)
+
+Mitral regurgitation (n=449)
+
+23, 0·5% (0·3–0·8)
+
+Mitral stenosis (n=15)
+
+0, 0% (0–0·1)
+
+Aortic regurgitation (n=90)
+Aortic stenosis (n=102)
+
+Frequency adjusted to
+2000 US adult population
+
+65–74
+
+≥75
+
+1240
+
+3879
+
+1745
+
+..
+
+209 128 094
+
+415 (33%)
+
+1586 (41%)
+
+826 (47%)
+
+..
+
+100 994 367 (48%)
+
+1, 0·1% (0–0·8)
+
+12, 1·0% (0·5–1·8)
+
+250, 6·4% (5·7–7·3)
+
+163, 9·3% (8·1–10·9)
+
+<0·0001
+
+1·7% (1·5–1·9)
+
+1, 0·1% (0–0·8)
+
+3, 0·2% (0·1–0·7)
+
+7, 0·2% (0·1–0·4)
+
+4, 0·2% (0·1–0·6)
+
+0·006
+
+0·1% (0·02–0·2)
+
+10, 0·2% (0·1–0·4)
+
+1, 0·1% (0–0·8)
+
+8, 0·7% (0·3–1·3)
+
+37, 1·0% (0·7–1·3)
+
+34, 2·0% (1·4–2·7)
+
+<0·0001
+
+0·5% (0·3–0·6)
+
+1, 0·02% (0–0·1)
+
+1, 0·1% (0–0·8)
+
+2, 0·2% (0·6–1·9)
+
+50, 1·3% (1·0–1·7)
+
+48, 2·8% (2·1–3·7)
+
+<0·0001
+
+0·4% (0·3–0·5)
+
+Any valve disease
+Overall (n=615)
+
+31, 0·7% (0·5–1·0)
+
+3, 0·4% (0·1–1·3)
+
+23, 1·9% (1·2–2·8)
+
+328, 8·5% (7·6–9·4)
+
+230, 13·2% (11·7–15·0)
+
+<0·0001
+
+2·5% (2·2–2·7)
+
+Women (n=356)
+
+19, 0·8% (0·5–1·3)
+
+1, 0·2% (0·01–1·3)
+
+13, 1·6% (0·9–2·7)
+
+208, 9·1% (8·0–10·4) 115, 12·6% (10·6–15·0)
+
+<0·0001
+
+2·4% (2·1–2·8)
+
+Men (n=259)
+
+12, 0·6% (0·3–1·1)
+
+2, 0·8% (0·1–2·8)
+
+10, 2·4% (1·2–4·4)
+
+120, 7·6% (6·3–9·0)
+
+<0·0001
+
+2·5% (2·1–2·9)
+
+115, 14·0% (11·7–16·6)
+
+Prevalence data are n, % (95% CI). Percentages are rounded to one decimal place.
+
+Table 1: Prevalence of valvular heart diseases in population-based studies
+
+www.thelancet.com Vol 368 September 16, 2006
+
+characteristic of volume or pressure overload. Compared
+with individuals without valvular disease, patients with
+mitral regurgitation showed left ventricular enlargement
+(measured by ventricular diameters) without hypertrophy
+(measured by ventricular mass), whereas those with aortic
+A
+14
+12
+
+All valve disease
+Mitral valve disease
+Aortic valve disease
+
+10
+8
+
+B
+
+Prevalence of moderate or severe valve disease (%)
+
+The national prevalence of valve diseases, taking into
+account the oversampling of the elderly population, and
+after adjustment for the national age and sex distribution
+of the US 2000 population census, was 2·5% (95% CI
+2·2–2·7; table 1). Of the diseases studied, mitral
+regurgitation was the most common, and mitral stenosis
+the least common. The prevalence of valve disease rose
+strikingly with advancing age (table 1 and ﬁgure 1). A
+large increase in the prevalence of mitral regurgitation
+was seen with ageing (table 1). Adjusted for sex, the odds
+ratio for the association of valve disease with increasing
+age (per 10 years) was signiﬁcant for mitral regurgitation
+(1·84, 95% CI 1·70–1·99; p<0·0001), mitral stenosis (1·65,
+1·12–2·43; p=0·01), aortic regurgitation (1·49, 1·30–1·70;
+p<0·0001), and aortic stenosis (2·51, 2·02–3·12;
+p<0·0001). There was no diﬀerence in age-adjusted valve
+disease rates in men versus women for most valve
+diseases (mitral regurgitation, p=0·67; mitral stenosis,
+p=0·74; aortic regurgitation, p=0·92). However, there was
+a trend for higher prevalence of aortic valve stenosis in
+men (p=0·06) than in women, and, after adjustment for
+age, men had higher rates of aortic stenosis than had
+women (odds ratio 1·52, 1·02–2·26; p=0·04).
+In Olmsted County, clinically diagnosed valvular heart
+disease was identiﬁed in 1505 residents (1·8% adjusted
+to the adult US population). A signiﬁcant increase in the
+prevalence of clinical valvular disease with age was seen
+in both men and women (ﬁgure 1 and table 2). Mitral
+regurgitation was the most commonly diagnosed valvular
+disease (1·0%, 0·9–1·1); the least common was mitral
+stenosis (0·04%, 0·03–0·05). The frequency of mitral
+valvular disease was higher than aortic valve disease
+(1·0% [0·9–1·1] vs 0·9% [0·8–0·9]; p=0·007). Valvular
+diseases were more commonly diagnosed in men than in
+women (p<0·0001 after adjustment for age. Odds ratio
+0·90, 0·81–1·01, p=0·07 after adjustment for the entire
+county population and age).
+Population-based participants with valvular diseases
+showed evidence of cardiac chamber remodelling (table 3),
+
+6
+4
+
+2
+0
+14
+12
+10
+8
+6
+4
+2
+0
+<45
+
+45–54
+
+55–64
+
+65–74
+
+≥75
+
+Age (years)
+
+Figure 1: Prevalence of valvular heart disease by age
+(A) Frequency in population-based studies and (B) in the Olmsted County community.
+
+1007
+
+Articles
+
+Age (years)
+
+p value for
+trend
+
+18–44
+
+45–54
+
+55–64
+
+65–74
+
+≥75
+
+Residents, n
+
+49 957
+
+16 306
+
+10 241
+
+6686
+
+6663
+
+Residents examined, n (% men)
+
+4310 (38%)
+
+2737 (48%)
+
+2847 (53%)
+
+2798 (53%)
+
+3851 (41%)
+
+..
+
+Mitral regurgitation (n=874)
+
+57, 0·1% (0·1–0·2)
+
+62, 0·4% (0·3–0·5)
+
+186, 2·8% (2·4–3·3)
+
+476, 7·1% (6·5–7·8)
+
+<0·0001
+
+93, 0·9% (0·7–1·1)
+
+..
+
+Mitral stenosis (n=33)
+
+5, 0·01% (0–0·02)
+
+3, 0·02% (0–0·05)
+
+3, 0·03% (0·01–0·1)
+
+8, 0·1% (0·05–0·2)
+
+14, 0·2% (0·1–0·4)
+
+<0·0001
+
+Aortic regurgitation (n=282)
+
+55, 0·1% (0·08–0·1)
+
+38, 0·2% (0·2–0·3)
+
+33, 0·3% (0·2–0·5)
+
+41, 0·6% (0·4–0·8)
+
+115, 1·7% (1·4–2·1)
+
+<0·0001
+
+Aortic stenosis (n=547)
+
+51, 0·1% (0·08–0·1)
+
+35, 0·2% (0·2–0·3)
+
+57, 0·6% (0·4–0·7)
+
+96, 1·4% (1·2–1·8)
+
+308, 4·6% (4·1–5·2)
+
+<0·0001
+
+Overall (n=1505)
+
+144, 0·3% (0·2–0·3)
+
+121, 0·7% (0·6–0·9)
+
+166, 1·6% (1·4–1·9)
+
+293, 4·4% (3·9–4·9)
+
+781, 11·7% (11·0–12·5)
+
+<0·0001
+
+Women (n=803)
+
+67, 0·3% (0·2–0·3)
+
+47, 0·6% (0·4–0·7)
+
+68, 1·3% (1·0–1·6)
+
+148, 4·2% (3·5–4·9)
+
+473, 10·9% (10·0–11·9)
+
+<0·0001
+
+Men (n=702)
+
+77, 0·3% (0·3–0·4)
+
+74, 0·9% (0·7–1·2)
+
+98, 2·0% (1·6–2·4)
+
+145, 4·7% (3·9–5·4)
+
+308, 13·2% (11·8–14·6)
+
+<0·0001
+
+Any valve disease
+
+Data are n, % (95% CI) unless otherwise stated.
+
+Table 2: Valvular heart diseases diagnosed in Olmsted County
+
+No valve disease
+
+Mitral regurgitation Mitral stenosis
+
+Aortic regurgitation Aortic stenosis
+
+Left ventricular diastolic diameter (mm)
+
+48·9 (5·9)
+
+51·2 (7·9)*
+
+48·6 (6·1)
+
+52·8 (8·4)*
+
+Left ventricular systolic diameter (mm)
+
+30·2 (5·9)
+
+31·4 (9·0)
+
+29·7 (8·1)
+
+32·7 (9·6)
+
+30·2 (7·0)
+
+Left ventricular mass (g)
+
+171·1 (70·1)
+
+170·6 (76·8)
+
+176·9 (54·0)
+
+219·2 (139·0)‡
+
+198·7 (80·9)†
+
+Left ventricular fractional shortening
+
+38·4% (7·7)
+
+39·5% (9·8)‡
+
+38·8% (13·1)
+
+38·8% (9·7)
+
+40·7% (8·3)†
+
+Left atrial diameter (mm)
+
+37·3 (6·0)
+
+40·4 (7·7)*
+
+54·2 (8·3)*
+
+41·4 (8·5)*
+
+42·5 (7·8)*
+
+50·5 (7·4)†
+
+Data are mean (SD). *p<0·0001, †p<0·05, and ‡p<0·001 compared with individuals without valve disease.
+
+Table 3: Cardiac chamber remodelling associated with valvular heart diseases in the population
+
+regurgitation showed left ventricular enlargement with
+hypertrophy. Individuals with aortic stenosis had left
+ventricular hypertrophy without enlargement, whereas
+those with mitral stenosis showed substantial left atrial
+enlargement without left ventricular alteration. The
+characteristics of each type of valve disease and those of
+A
+
+patients without valve diseases were much the same in
+Olmsted County as in the population-based studies.
+In the population-based studies, survival of
+participants with valve diseases was 79% (SE 2) at
+5 years and 68% (1·9) at 8 years, compared with 93%
+(0·2) and 86% (0·4) at the same time points in those
+B
+
+100
+
+80
+Survival (%)
+
+p<0·0001
+Without valve disease
+With valve disease
+
+60
+
+Expected
+Observed
+
+p<0·0001
+
+40
+
+20
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+Years
+Number at risk
+Valve disease
+No valve disease
+
+615
+591 566
+541 503 456
+11 296 11 207 11 050 10 785 9507 8215
+
+10
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Years
+438
+8001
+
+413
+7735
+
+376
+5054
+
+331
+3233
+
+971 863
+765 667 589
+Number at risk
+Expected survival 100% 94% 88% 83% 78%
+
+449
+392
+518
+73% 69% 65%
+
+73
+61%
+
+Figure 2: Survival after detection of moderate or severe valvular heart disease
+(A) Survival in population-based studies. (B) Expected versus observed survival in Olmsted County. The blue line represents survival of 971 residents diagnosed with valve diseases between 1990 and
+1995; the yellow line represents the expected survival in the age-matched and sex-matched population of the county.
+
+1008
+
+www.thelancet.com Vol 368 September 16, 2006
+
+Articles
+
+without such disease (p<0·0001, ﬁgure 2A). The
+adjusted relative risk of death associated with valvular
+disease was 1·36 (1·15–1·62; p=0·0005). In 971 Olmsted
+County residents diagnosed with valvular disease
+between 1990 and 1995, observed survival was 56% (1·6)
+at 5 years, compared with an expected survival of 73%.
+At 8 years, observed survival was 41% (1·7) versus an
+expected 61% (p<0·0001, ﬁgure 2B). The risk of death
+associated with valve diseases relative to expected (for
+same age and sex) in Olmsted County was 1·75
+(1·61–1·90; p<0·0001).
+
+Discussion
+Our study has shown that the population burden of
+clinically noteworthy valvular heart diseases is
+considerable in the US population. This burden is also
+notable for clinically diagnosed valve disease in the
+community. The diﬀerence between the prevalence of
+such diseases in the population and the percentage of
+people diagnosed with valvular heart diseases in the
+community (2·5% vs 1·8%) is probably due to
+undiagnosed valve diseases.
+Valve diseases detected in the general population and
+diagnosed in the community are not mere imaging
+peculiarities but are, in both settings, associated with
+characteristics of pressure or volume overload and
+independent determinants of subsequent mortality.
+Thus, these observations underscore the relevance of
+our ﬁndings and the need for enhanced research and
+therapeutic eﬀorts directed towards valvular diseases.
+Men and women are aﬀected by valve diseases to much
+the same extent in the population, but women are less
+often diagnosed in the community, suggesting
+a diagnostic imbalance that could have serious
+consequences for women with valve diseases.
+The EuroHeart survey11 attracted attention to the
+frequent and severe clinical presentation of valve
+diseases, but the burden of valve diseases cannot be
+fully appreciated by incident clinical cases of valve
+diseases that are mostly discovered on the basis of
+hospitalisation or surgical series. Our study provides
+information on valve disease in the general population
+(ie, diagnosed or not) and in the community (ie,
+individuals coming to clinical attention). Large,
+randomly selected samples of the US population provide
+a unique view of the burden of valve diseases in the
+general population. By use of the 2000 US population
+census to account for the prospective oversampling of
+the elderly population, our estimate of the prevalence of
+valve diseases in adults corresponds to a 2000 burden of
+4·2–5·6 million adults with valve diseases in the USA.
+Consistent patterns of distribution of valve diseases
+in the general population and in the community show
+that older age is an independent determinant of all
+forms of valve disease that arise with considerable
+frequency in elderly people, in accord with the notion
+that the burden of valve disease increases with ageing.
+www.thelancet.com Vol 368 September 16, 2006
+
+Such a trend was suspected on the basis of the age and
+causal factors in patients with valve diseases who were
+referred to surgery and in those who participated in the
+prospective EuroHeart survey,11 and from small
+population subsets.6,14–16 Our study deﬁnes the prevalence
+of valve diseases in all adult segments of the population
+with robust estimates, which is a result of the coherent
+and comprehensive echocardiographic methodology in
+the series we analysed. Importantly, our study shows not
+only the trend of increasing prevalence with age but also
+very high absolute rates of valve diseases in elderly
+people. Indeed, more than one in eight people
+aged 75 and older have a moderate or severe valve
+disease. Thus, with the projected shift to an older and
+larger population,12 the burden of valvular diseases will
+probably increase substantially in the future, despite the
+fall in rheumatic heart disease. The narrow CIs and high
+coherence between population and community data
+leave little doubt that this burden is high and will rise.
+Not all patients with valve disease are diagnosed and
+treated, as shown by the lower detection of valve disease
+in the community than found in the general population.
+This diﬀerence is probably due to the need for
+echocardiography to be clinically indicated before
+diagnosis is made, and could have serious consequences
+for undiagnosed patients, in view of the outcome
+implications of valve diseases. Aortic stenosis showed
+the least diﬀerence between population and community,
+possibly because of poor clinical tolerance,28 but its high
+prevalence in elderly individuals is conﬁrmed by the
+population-based Helsinki Ageing Study.16 This gap in
+clinical diagnosis of valve diseases, particularly in
+elderly patients, underscores the importance of
+quantitative echocardiography29 whenever the diagnosis
+is suspected or is simply a possible explanation for
+unexplained symptoms.
+Although most valvular diseases were equally
+diagnosed in men and women in the population groups,
+mitral and aortic regurgitation was more often
+diagnosed in men than in women in the community
+setting. Reported surgical series of mitral or aortic
+regurgitation consistently show a male predominance
+of 60–75%.30,31 The imbalance of sex ratios between valve
+regurgitations identiﬁed in the general population and
+those diagnosed in the community or operated on in
+surgical series is important and could indicate a sex
+bias in referral patterns for diagnosis and treatment.
+The mechanisms for such an imbalance should be
+investigated prospectively.
+The valve diseases detected here are not only benign
+imaging observations but have profound consequences,
+with cardiac remodelling and excess mortality recorded
+in the population and in the community despite the
+availability of radical treatment with surgical valve
+repair or replacement.28 We adjusted excess mortality
+for coronary disease and for expected mortality to
+remove the potential role of coronary or comorbid
+1009
+
+Articles
+
+diseases in our estimation of the risk. The excess risk
+associated with valve disease indicates the importance
+of early detection of valve diseases. Early detection is
+key to improving prognosis, since the EuroHeart survey
+showed that many patients are denied intervention
+despite deﬁnite guideline-based indications, mostly
+because of older age.32 Not all elderly patients can be
+candidates for surgery—eg, because of comorbid
+conditions—emphasising the importance of emerging
+percutaneous therapeutic approaches.
+Echocardiography is the only method available to
+estimate the frequency and distribution of valve disease
+in large populations,33 and cannot be corroborated by
+other tests (eg, catheterisation) because of the risk and
+cost. Studies where valve disease is the primary focus
+could provide higher sensitivity in detecting such
+diseases, but are not available. Valve disease aetiology
+encompasses many causes (eg, rheumatic vs
+degenerative), but our study does not address this issue.
+Nonetheless, we present a broad descriptive view of the
+distribution pattern of clinically signiﬁcant valve
+diseases in the general population and community.
+We did not reread original echocardiographs, and
+valve disease assessment in the population-based
+studies was either qualitative or semi-quantitative;
+detailed
+assessment
+with
+more
+quantitative
+measurements was not done.26,34 However, those
+individuals identiﬁed with valve diseases showed
+cardiac remodelling consistent with the haemodynamics
+of each particular valve lesion,35 which we judged
+appropriate for the identiﬁcation of a particular valve
+disease. Nevertheless, future studies using quantitative
+measurements in the population are warranted.
+The generalisability of the data presented here is
+essential. In a model that adjusted for age, the NHLBI
+studies showed no signiﬁcant heterogeneity of valve
+disease assessment. Furthermore, the careful sampling
+of the general population in the NHLBI studies, and the
+coherence between population and community, provide
+a robust assessment of the burden of valve disease.
+The high prevalence of valvular heart diseases,
+together with its increase with ageing, indicate a high
+and increasing burden of such conditions. Valve
+diseases are underdiagnosed in the community,
+especially in women, which could represent an
+important bias, since these diseases are associated with
+serious physiological and outcome consequences.
+Valvular heart diseases represent an underappreciated
+yet serious and growing public-health problem that
+should be addressed with appropriate resources to
+improve diagnosis, treatment, and research.
+Contributors
+V T Nkomo and M Enriquez-Sarano conceived this study and wrote the
+manuscript. J M Gardin, T N Skelton, and J S Gottdiener were principal
+investigators for the CARDIA, ARIC, and CHS population studies, and
+participated in the drafting and review of the manuscript. C G Scott was
+the data analyst and statistician, and participated in the drafting of the
+manuscript.
+
+1010
+
+Conﬂict of interest statement
+M Enriquez-Sarano is a consultant for, and has received honoraria from,
+Edwards Lifesciences, and has received research grants from Pﬁzer,
+Astra Zeneca, and Edwards Lifesciences. All other authors declare that
+they have no conﬂict of interest.
+Acknowledgments
+This study was supported by funding from the Division of
+Cardiovascular Diseases, Mayo Clinic, Mayo Foundation, and in part by
+the grant HL 64928 of the National Institutes of Health.
+References
+1
+Anon. Rheumatic fever and rheumatic heart disease.
+World Health Organ Tech Rep Ser 2004; 923: 1–122.
+2
+Olson LJ, Subramanian R, Ackermann DM, Orszulak TA,
+Edwards WD. Surgical pathology of the mitral valve: a study of
+712 cases spanning 21 years. Mayo Clin Proc 1987; 62: 22–34.
+3
+Pomerance A. Ageing changes in human heart valves. Br Heart J
+1967; 29: 222–31.
+4
+Akasaka T, Yoshikawa J, Joshida K. Age-related valvular
+regurgitation. A study by pulsed Doppler echocardiography.
+Circulation 1967; 76: 262.
+5
+Klein AL, Burstow DJ, Tajik AJ, et al. Age-related prevalence of
+valvular regurgitation in normal subjects: a comprehensive color
+ﬂow examination of 118 volunteers. J Am Soc Echocardiogr 1990;
+3: 54–63.
+6
+Singh JP, Evans JC, Levy D, et al. Prevalence and clinical
+determinants of mitral, tricuspid, and aortic regurgitation (the
+Framingham Heart Study). Am J Cardiol 1999; 83: 897–902.
+7
+Lucas G, Tribouilloy C. Epidemiology and etiology of acquired heart
+valve diseases in adults. Rev Prat 2000; 50: 1642–45.
+8
+Soler-Soler J, Galve E. Worldwide perspective of valve disease.
+Heart 2000; 83: 721–25.
+9
+Society of Thoracic Surgeons. STS National Database Spring 2002
+executive summary–contents. http://www. ctsnet.org/ﬁle/2002/
+ExecutiveReport_Rev.pdf (accessed Aug 4, 2006).
+10 Thom T, Haase N, Rosamond W, et al. Heart disease and stroke
+statistics—2006 update: a report from the American Heart
+Association Statistics Committee and Stroke Statistics
+Subcommittee. Circulation 2006; 113: e85–151.
+11 Iung B, Baron G, Butchart EG, et al. A prospective survey of
+patients with valvular heart disease in Europe: The Euro Heart
+Survey on Valvular Heart Disease. Eur Heart J 2003; 24: 1231–43.
+12 US Census Bureau. United States Census 2000. Washington, DC,
+USA: US Census Bureau, 2001.
+13 Attenhofer Jost CH, Turina J, Mayer K, et al. Echocardiography in
+the evaluation of systolic murmurs of unknown cause. Am J Med
+2000; 108: 614–20.
+14 Lebowitz NE, Bella JN, Roman MJ, et al. Prevalence and correlates
+of aortic regurgitation in American Indians: the Strong Heart Study.
+J Am Coll Cardiol 2000; 36: 461–67.
+15 Jones EC, Devereux RB, Roman MJ, et al. Prevalence and correlates
+of mitral regurgitation in a population-based sample (the Strong
+Heart Study). Am J Cardiol 2001; 87: 298–304.
+16 Lindroos M, Kupari M, Heikkila J, Tilvis R. Prevalence of aortic
+valve abnormalities in the elderly: an echocardiographic study of a
+random population sample. J Am Coll Cardiol 1993; 21: 1220–25.
+17 Aronow WS, Ahn C, Kronzon I. Prevalence of echocardiographic
+ﬁndings in 554 men and in 1,243 women aged >60 years in a
+long-term health care facility. Am J Cardiol 1997; 79: 379–80.
+18 Hughes GH, Cutter G, Donahue R, et al. Recruitment in the
+Coronary Artery Disease Risk Development in Young Adults
+(Cardia) Study. Control Clin Trials 1987; 8 (4 suppl): 68–73S.
+19 The ARIC investigators. The Atherosclerosis Risk in Communities
+(ARIC) Study: design and objectives. Am J Epidemiol 1989;
+129: 687–702.
+20 Fried LP, Borhani NO, Enright P, et al. The Cardiovascular Health
+Study: design and rationale. Ann Epidemiol 1991; 1: 263–76.
+21 Melton LJ 3rd. History of the Rochester Epidemiology Project.
+Mayo Clin Proc 1996; 71: 266–74.
+22 Gardin JM, Wong ND, Bommer W, et al. Echocardiographic
+design of a multicenter investigation of free-living elderly subjects:
+the Cardiovascular Health Study. J Am Soc Echocardiogr 1992; 5:
+63–72.
+
+www.thelancet.com Vol 368 September 16, 2006
+
+Articles
+
+23
+
+24
+
+25
+
+26
+
+27
+28
+
+29
+
+Furberg CD, Psaty BM, Manolio TA, Gardin JM, Smith VE,
+Rautaharju PM. Prevalence of atrial ﬁbrillation in elderly subjects
+(the Cardiovascular Health Study). Am J Cardiol 1994; 74: 236–41.
+Perry GJ, Helmcke F, Nanda NC, Byard C, Soto B. Evaluation of
+aortic insuﬃciency by Doppler color ﬂow mapping.
+J Am Coll Cardiol 1987; 9: 952–59.
+Helmcke F, Nanda NC, Hsiung MC, et al. Color Doppler
+assessment of mitral regurgitation with orthogonal planes.
+Circulation 1987; 75:175–83.
+Zoghbi WA, Enriquez-Sarano M, Foster E, et al. Recommendations
+for evaluation of the severity of native valvular regurgitation with
+two-dimensional and Doppler echocardiography.
+J Am Soc Echocardiogr 2003; 16: 777–802.
+Hatle L. Noninvasive assessment of valve lesions with Doppler
+ultrasound. Herz 1984; 9: 213–21.
+Bonow RO, Carabello B, de Leon AC, et al. ACC/AHA Guidelines
+for the Management of Patients With Valvular Heart Disease.
+Executive Summary. A report of the American College of
+Cardiology/American Heart Association Task Force on Practice
+Guidelines (Committee on Management of Patients With Valvular
+Heart Disease). J Heart Valve Dis 1998; 7: 672–707.
+Nishimura RA, Miller FA Jr, Callahan MJ, Benassi RC, Seward JB,
+Tajik AJ. Doppler echocardiography: theory, instrumentation,
+technique, and application. Mayo Clin Proc 1985; 60: 321–43.
+
+www.thelancet.com Vol 368 September 16, 2006
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+Klodas E, Enriquez-Sarano M, Tajik AJ, Mullany CJ, Bailey KR,
+Seward JB. Surgery for aortic regurgitation in women. Contrasting
+indications and outcomes compared with men. Circulation 1996;
+94: 2472–78.
+Mohty D, Orszulak TA, Schaﬀ HV, Avierinos JF, Tajik JA,
+Enriquez-Sarano M. Very long-term survival and durability of mitral
+valve repair for mitral valve prolapse. Circulation 2001; 104
+(suppl 1): I1–I7.
+Iung B, Cachier A, Baron G, et al. Decision-making in elderly
+patients with severe aortic stenosis: why are so many denied
+surgery? Eur Heart J 2005; 26: 2714–20.
+Chen L, Otto CM. Longitudinal assessment of valvular heart
+disease by echocardiography. Curr Opin Cardiol 1998;
+13: 397–403.
+Quinones MA, Otto CM, Stoddard M, et al. Recommendations for
+quantiﬁcation of Doppler echocardiography: a report from the
+Doppler Quantiﬁcation Task Force of the Nomenclature and
+Standards Committee of the American Society of Echocardiography.
+J Am Soc Echocardiogr 2002; 15: 167–84.
+Carabello BA. Concentric versus eccentric remodeling. J Card Fail
+2002; 8 (6 suppl): S258–63.
+
+1011
+
+
