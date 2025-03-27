@@ -1,0 +1,205 @@
+---
+title: "Z-curve Test"
+format: pdf
+editor: visual
+---
+
+```{r}
+
+
+### clear the workspace
+rm(list = ls())
+
+### install packages if not already installed
+install.packages("zcurve")
+install.packages("readxl")
+
+### load the zcurve package to create a zcurve
+library(zcurve)
+
+### load the excel package to read excel files
+library(readxl)
+
+### you can find many datasets here 
+"https://www.dropbox.com/s/wj82c0wy7f08gpb/"
+
+### in theory you should be able to load data directly from the web
+### but I am having problems with this file 
+### for now, just download the files 
+#link = "https://www.dropbox.com/s/wj82c0wy7f08gpb/Ulrich%20Schimmack-z.wos.csv?dl=0"
+#data = read.csv(url(link))
+#dim(data)
+data= read.csv("Z_curve_test_data/Ulrich Schimmack-z.wos.csv")
+### set the directory to where the data are stored
+setwd("C:/Users/justi/Desktop/2025/DSCI 478/Final Project/DSCI 478 Capstone Project/Assessing-the-Quality-of-Nutrition-Research/Z_curve_test_data")
+
+### get a list of file names in the directory 
+file.names = list.files(full.names = FALSE);  
+file.names = file.names[pos = unlist(gregexpr(pattern = "z.wos.csv",file.names,ignore.case=TRUE)) > 0]
+file.names
+
+author = "Ulrich Schimmack"
+file.name = file.names[pos = unlist(gregexpr(pattern = author,file.names,ignore.case=TRUE)) > 0]
+file.name
+
+### read the data from csv file
+data = data.frame(read.csv(file.name))
+
+### read the data from xlsx file
+data = data.frame(readxl(file.name))
+
+### see how many rows and columns there are 
+dim(data)
+
+### read the column/variable names
+colnames(data)
+
+### see how many rows have pvalues vs. no data (NA)
+table(!is.na(data$z))
+
+### remove rows with missing data 
+data = data[!is.na(data$z),]
+
+### if the data are p-values, transform p-values to z-values
+### using log.p allows to convert even very small p-values 
+data$z = qnorm(log(1 - data$p/2), log.p=TRUE)
+
+### replace very high z-scores and infinity (Inf) with a maximum value of your choice (any value greater than 6 is ok)
+data$z[data$z > 10] = 10
+
+### get summary statistics for the transformed z-scores
+summary(data$z)
+
+
+### conduct z-curve analysis and store results in a data frame "results"
+
+### if numer of z-scores (k) is large, run first without bootstrap
+results = zcurve(data$z, bootstrap = 0); plot.zcurve(results); summary(results)
+
+### show full z-curve including predictd distribution for non-significant results 
+plot.zcurve(results,extrapolate = TRUE)
+
+
+### if numer of z-scores (k) is small or for final analysis, run with boostrap default minimum 500
+results = zcurve(data$z, bootstrap = 500); plot.zcurve(results); summary(results)
+
+### show full z-curve including predictd distribution for non-significant results and confidence interval  
+plot.zcurve(results,extrapolate = TRUE, CI = TRUE)
+
+### add annotation with key results to the plot
+plot.zcurve(results,extrapolate = TRUE, CI = TRUE, annotation = TRUE)
+
+
+### compute Observed Discovery Rate (ODR); percentage of significant results
+alpha = .05
+odr = table(data$z > qnorm(1-alpha/2)); odr = odr/sum(odr); odr
+
+### compute the false discovery risk 
+fdr = round((1/coef(summary(results))[2,]-1)*(alpha/(1-alpha))*100)[c(1,3,2)]; fdr
+
+### fit z-curve with different alpha level, lower alpha to decrease false positive risk 
+alpha = .01
+### lower.limit.of.fitted.interval
+ll.int = 1.96
+results = zcurve(data$z, bootstrap = 500, control=list(a = ll.int, sig_level = alpha)); plot.zcurve(results); summary(results)
+fdr = round((1/coef(summary(results))[2,]-1)*(alpha/(1-alpha))*100)[c(1,3,2)]; fdr
+plot.zcurve(results,extrapolate = TRUE, CI = TRUE, annotation = TRUE)
+odr = table(data$z > qnorm(1-alpha/2)); odr = odr/sum(odr); odr
+
+
+
+
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+### clear the workspace
+rm(list = ls())
+
+### install packages if not already installed
+if (!require("zcurve")) install.packages("zcurve")
+if (!require("readxl")) install.packages("readxl")
+
+### load the necessary packages
+library(zcurve)
+library(readxl)
+
+### set your working directory to where the data is stored
+setwd("C:/Users/justi/Desktop/2025/DSCI 478/Final Project/DSCI 478 Capstone Project/Assessing-the-Quality-of-Nutrition-Research/Z_curve_test_data")
+
+### get list of CSV files that match the pattern
+file.names <- list.files(pattern = "z.wos.csv", full.names = FALSE)
+file.names
+
+### filter by author name
+author <- "Ulrich Schimmack"
+file.name <- file.names[grepl(author, file.names, ignore.case = TRUE)]
+file.name
+
+### read the CSV file
+data <- read.csv(file.name)
+
+### check the structure
+dim(data)
+colnames(data)
+
+### remove rows with missing z-scores
+data <- data[!is.na(data$z),]
+
+### transform p-values to z-values (if needed)
+#data$z <- qnorm(log(1 - data$p / 2), log.p = TRUE)
+
+### cap extreme z-values
+data$z[data$z > 10] <- 10
+
+### basic summary
+summary(data$z)
+
+### initial z-curve without bootstrap
+results <- zcurve(data$z, bootstrap = 0)
+plot.zcurve(results)
+summary(results)
+
+### full z-curve with extrapolation
+plot.zcurve(results, extrapolate = TRUE)
+
+### full z-curve with bootstrap
+results <- zcurve(data$z, bootstrap = 500)
+plot.zcurve(results)
+summary(results)
+
+### plot with confidence interval and annotation
+plot.zcurve(results, extrapolate = TRUE, CI = TRUE, annotation = TRUE)
+
+### calculate observed discovery rate (ODR)
+alpha <- 0.05
+odr <- table(data$z > qnorm(1 - alpha / 2))
+odr <- odr / sum(odr)
+odr
+
+### calculate false discovery risk (FDR)
+fdr <- round((1 / coef(summary(results))[2,] - 1) * (alpha / (1 - alpha)) * 100)[c(1,3,2)]
+fdr
+
+### rerun with stricter alpha level
+alpha <- 0.01
+ll.int <- 1.96
+results <- zcurve(data$z, bootstrap = 500, control = list(a = ll.int, sig_level = alpha))
+plot.zcurve(results)
+summary(results)
+
+### recalculate FDR and ODR for new alpha
+fdr <- round((1 / coef(summary(results))[2,] - 1) * (alpha / (1 - alpha)) * 100)[c(1,3,2)]
+fdr
+
+### plot with extrapolation, confidence interval, and annotation
+plot.zcurve(results, extrapolate = TRUE, CI = TRUE, annotation = TRUE)
+
+### recalculate and display observed discovery rate (ODR) for new alpha
+odr <- table(data$z > qnorm(1 - alpha / 2))
+odr <- odr / sum(odr)
+odr
+
+
+```
