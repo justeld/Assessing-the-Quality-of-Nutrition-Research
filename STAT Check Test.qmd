@@ -39,6 +39,7 @@ Try it on a pdf
 
 checkPDF("Test PDFs/nuijten2015.pdf")
 
+
 checkPDF("Test PDFs/s13428-025-02599-1.pdf")
 checkHTML("Test PDFs/s13428-025-02599-1.pdf")
 
