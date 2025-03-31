@@ -14,8 +14,10 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
-install.packages("statcheck")
+#install.packages("statcheck")
 library(statcheck)
+#install.packages("pdftools")
+library(pdftools)
 ```
 
 Try it on a raw text string as a test
@@ -31,5 +33,38 @@ Try it on a pdf
 #Try setting the working directory
 
 
-checkPDF("\\Test PDFs\\Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba")
+#lines <- readLines("Test PDFs/nuijten2015.txt")
+
+#statcheck(lines)
+
+checkPDF("Test PDFs/nuijten2015.pdf")
+
+
+checkPDF("Test PDFs/s13428-025-02599-1.pdf")
+checkHTML("Test PDFs/s13428-025-02599-1.pdf")
+
+
+checkPDF("Test PDFs/s13428-018-1147-z.pdf")
+text2 <-pdf_text("Test PDFs/s13428-025-02599-1.pdf")
+statcheck(text2)
+
+library(pdftools)
+text <- pdf_text("Test PDFs/s13428-018-1147-z.pdf")
+cat(text[1:13])  # Print first page to check
+
+statcheck(text)
+
+
+text3 <- pdf_text("Test PDFs/xge-a0030830.pdf")
+
+statcheck(text3)
+
+# checkPDF("\\Test PDFs\\Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf")
+
+
 ```
+
+```{r}
+test_df <-statcheck(c(text, text2, text3))
+```
+
