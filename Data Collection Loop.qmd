@@ -1,0 +1,94 @@
+---
+title: "Collection Loop Test"
+format: pdf
+editor: visual
+---
+
+## Data Collection Loop
+
+We will create a loop that can go through a directory of papers and extract the relevant statistics from them while maintaining the citation information.
+
+```{r}
+
+#Import the appropriate libraries
+#install.packages("statcheck")
+#install.packages("pdftools")
+library(statcheck)
+library(pdftools)
+
+#Define a function that 
+collect_stats <- function(filedir){
+  
+  #Get a list of the files in the chosen directory
+  files <- list.files(filedir, pattern = "\\.pdf", full.names = TRUE)
+  
+  #Create an empty data frame 
+  stats_df <- data.frame()
+  
+  #Create an empty data frame to store the papers where no stats were found
+  null_df <- data.frame()
+  
+  #Initialize a counter for the number of papers where no stats were found
+  null_counter <- 0
+  
+  #Use a for loop to run each file through statcheck and store the results
+  
+  for (file in files){
+    
+    #Convert each file to text
+    text <- pdf_text(file)
+    
+    #Collapse all of the vectors into a single string
+    full_text <- paste(text, collapse="\n")
+    
+    #Save the results into a data frame
+    result <- statcheck(full_text)
+    
+    #If statcheck doesn't find any results it will return null
+    if (is.data.frame(result) && nrow(result) > 0) {
+      result$source <- basename(file)
+      stats_df <- rbind(stats_df, result)
+    } 
+    else {
+      null_counter= null_counter +1
+      null_df <- rbind(null_df, data.frame(source = basename(file)))
+      message("No stats found in: ", basename(file))
+    }
+    
+    #Combine with previous results
+    stats_df <- rbind(stats_df, result)
+  }
+  
+  #Create a print message with the number of null papers
+  return_message <- paste(null_counter,"papers had no results found.")
+  
+  #Return the resulting data frame
+  return(list(
+  results = stats_df,
+  nulls = null_df,
+  message = return_message
+))
+
+}
+
+#Test the function
+test_results <- collect_stats("Test PDFs/")
+
+test2 <- collect_stats("478-articles")
+
+test2$nulls
+
+test2$results
+
+#View the data frames and return message
+test_results$message
+
+ahe_text <- pdf_text("478-articles/Anhe_2017.pdf")
+ahe_text
+
+millstext <- pdf_text("478-articles/Mills_2008.pdf")
+
+statcheck(millstext)
+
+millstext
+```

@@ -46,7 +46,7 @@ checkHTML("Test PDFs/s13428-025-02599-1.pdf")
 
 checkPDF("Test PDFs/s13428-018-1147-z.pdf")
 text2 <-pdf_text("Test PDFs/s13428-025-02599-1.pdf")
-statcheck(text2)
+test_df <- statcheck(text2)
 
 library(pdftools)
 text <- pdf_text("Test PDFs/s13428-018-1147-z.pdf")
@@ -59,7 +59,7 @@ text3 <- pdf_text("Test PDFs/xge-a0030830.pdf")
 
 statcheck(text3)
 
-# checkPDF("\\Test PDFs\\Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf")
+#checkPDF("\\Test PDFs\\Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf")
 
 
 ```
