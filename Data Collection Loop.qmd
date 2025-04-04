@@ -74,6 +74,21 @@ collect_stats <- function(filedir){
 #Test the function
 test_results <- collect_stats("Test PDFs/")
 
+test2 <- collect_stats("478-articles")
+
+test2$nulls
+
+test2$results
+
 #View the data frames and return message
 test_results$message
+
+ahe_text <- pdf_text("478-articles/Anhe_2017.pdf")
+ahe_text
+
+millstext <- pdf_text("478-articles/Mills_2008.pdf")
+
+statcheck(millstext)
+
+millstext
 ```
