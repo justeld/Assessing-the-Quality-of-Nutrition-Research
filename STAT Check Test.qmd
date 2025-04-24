@@ -5,15 +5,11 @@ format: pdf
 editor: visual
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+# Statcheck Test
 
 ```{r}
+#Install the appropriate packages
+
 #install.packages("statcheck")
 library(statcheck)
 #install.packages("pdftools")
@@ -23,6 +19,7 @@ library(pdftools)
 Try it on a raw text string as a test
 
 ```{r}
+
 txt <- "blablabla the effect was very significant (t(48) = 1.02, p < .05)"
 statcheck(txt)
 ```
@@ -42,11 +39,13 @@ checkPDF("Test PDFs/nuijten2015.pdf")
 
 checkPDF("Test PDFs/s13428-025-02599-1.pdf")
 checkHTML("Test PDFs/s13428-025-02599-1.pdf")
+text2 <-pdf_text("Test PDFs/s13428-025-02599-1.pdf")
 
+
+statcheck(text2)
 
 checkPDF("Test PDFs/s13428-018-1147-z.pdf")
-text2 <-pdf_text("Test PDFs/s13428-025-02599-1.pdf")
-test_df <- statcheck(text2)
+
 
 library(pdftools)
 text <- pdf_text("Test PDFs/s13428-018-1147-z.pdf")
@@ -67,4 +66,3 @@ statcheck(text3)
 ```{r}
 test_df <-statcheck(c(text, text2, text3))
 ```
-

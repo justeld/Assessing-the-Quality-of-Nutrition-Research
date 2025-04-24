@@ -1,0 +1,38 @@
+---
+title: "zcurvedata test"
+author: "Justin Eldridge"
+format: pdf
+editor: visual
+---
+
+## #zcurve_data() function test
+
+```{r}
+library(zcurve)
+library(dplyr)
+
+test_df <- read.csv("Z_curve_test_data/test_data.csv")
+
+test_clean <- zcurve_data(test_df$p_value)
+
+test_clean$precise
+
+test_clean$censored
+```
+
+You can add options to executable code like this
+
+```{r}
+
+test_df2 <- read.csv("Z_curve_test_data/first_test.csv", stringsAsFactors = FALSE)
+
+test_df2$p[test_df2$p == ""] <- NA
+
+test_valid <- test_df2 %>% filter(!is.na(p))
+
+data <-zcurve_data(test_valid$p)
+
+data
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
