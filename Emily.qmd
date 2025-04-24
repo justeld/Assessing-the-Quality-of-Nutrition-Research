@@ -1,0 +1,88 @@
+---
+title: "Emily"
+author: ""
+format: pdf
+editor: source
+jupyter: python3
+---
+
+This is Emily's file where she's testing testing testing. Emily only, no one else is allowed. 
+
+```{r}
+file.exists("C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf")
+getwd()
+
+pdf_file_path <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf"
+
+pdf_path_dir <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs"
+```
+
+```{r}
+# install.packages("pdftools")
+# install.packages("statcheck")
+# install.packages("tesseract")
+library(pdftools)
+library(statcheck)
+library(tesseract)
+```
+```{r}
+
+pdf_file_path <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/nuijten2015.pdf"
+
+text <- pdf_text(pdf_file_path)
+cleaned_text <- gsub("\\s+", " ", text)
+
+pdf_images <- pdf_convert(pdf_file_path, format = "png", pages = NULL)
+ocr_engine <- tesseract("eng")
+
+ocr_text_all <- lapply(pdf_images, function(image) {
+  ocr(image, engine = ocr_engine)
+})
+combined_ocr_text <- paste(ocr_text_all, collapse = "\n")
+cleaned_ocr_text <- gsub("\\s+", " ", ocr_text)
+
+```
+```{r}
+statcheck(cleaned_text)
+```
+```{r}
+statcheck(combined_ocr_text)
+statcheck(cleaned_ocr_text)
+```
+
+```{r}
+# # install.packages("reticulate")
+# library(reticulate)
+# use_python("C:\\Users\\emily\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe")
+# # use_python("C:/Users/emily/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts")
+# ```
+# 
+# ```{python}
+# # pip install PyMuPDF
+# # pip install camelot-py
+# # pip install jupyter
+# 
+# "C:/Users/emily/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts"
+# 
+# import fitz
+# print("again")
+# 
+# def extract_text_from_pdf(pdf_path):
+#     doc = fitz.open(pdf_path)
+#     text = ""
+#     for page in doc:
+#         text += page.get_text()
+#     return text
+# 
+# # Path to the PDF file
+# pdf_path = "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf"
+# text = extract_text_from_pdf(pdf_path)
+# # Return the extracted text
+# print(text)
+# ```
+# ```{r}
+# library(stringr)
+# 
+# p_values <- str_extract_all(text, "p\\s*=\\s*[0-9\\.]+")
+# print(p_values)
+```
