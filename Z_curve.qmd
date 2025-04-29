@@ -1,0 +1,94 @@
+---
+title: "Zcurve"
+format: pdf
+editor: visual
+---
+
+## Quarto
+
+```{r}
+library(zcurve)
+library(dplyr)
+library(ggplot2)
+
+
+```
+
+```{r}
+# test_df2 <- read.csv("Z_curve_test_data/first_test.csv", stringsAsFactors = FALSE)
+# 
+# test_df2$p[test_df2$p == ""] <- NA
+# 
+# test_valid <- test_df2 %>% filter(!is.na(p))
+# 
+# data <-zcurve_data(test_valid$p)
+# 
+# data
+
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
+
+data$p[data$p == ""] <- NA
+data$Z[data$Z == ""] <- NA
+data$Z <- as.numeric(data$Z)  # Explicit conversion to numeric
+
+data_clean <- data %>%
+  filter(!is.na(p) | !is.na(Z))
+
+data_clean_p <- data_clean %>%
+  filter(!is.na(p))
+
+data_clean_z <- data_clean %>%
+  filter(!is.na(Z))
+
+p_data <- zcurve_data(data_clean_p$p)
+p_censored <- p_data$censored
+
+z <- data_clean_z$Z
+p <- p_data$precise
+p <- p$p
+
+#p <- p %>%
+  
+p.lb <- p_censored$p.lb
+p.ub <- p_censored$p.ub
+
+zcurve_obj <-zcurve(z = z, p = p, p.lb = p.lb, p.ub = p.ub, method="EM",
+                    bootstrap=100)
+
+plot(zcurve_obj)
+ 
+summary.zcurve(zcurve_obj)
+
+
+zcurve_plot <-plot.zcurve(zcurve_obj, extrapolate = TRUE, annotation = TRUE, CI=TRUE,
+            plot_type= 'ggplot')
+
+zcurve_plot <- zcurve_plot +
+  labs(caption="Nutrition Data")+
+  theme(plot.title=element_text(hjust=0.5))
+
+#Display the plot
+zcurve_plot
+
+```
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
