@@ -14,34 +14,22 @@ library(ggplot2)
 
 ```
 
-```{r}
-# test_df2 <- read.csv("Z_curve_test_data/first_test.csv", stringsAsFactors = FALSE)
-# 
-# test_df2$p[test_df2$p == ""] <- NA
-# 
-# test_valid <- test_df2 %>% filter(!is.na(p))
-# 
-# data <-zcurve_data(test_valid$p)
-# 
-# data
 
+```{r, warning=FALSE}
 
-
-```
-
-```{r}
-
-
-
-```
-
-```{r}
+#Read in the data:
 data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
 
+#Replace missing values with NA's
 data$p[data$p == ""] <- NA
 data$Z[data$Z == ""] <- NA
+data$t[data$t == ""] <- NA
+data$chi[data$chi == ""] <- NA
+
+#Convert the z column to numeric
 data$Z <- as.numeric(data$Z)  # Explicit conversion to numeric
 
+#Filter out the NA values
 data_clean <- data %>%
   filter(!is.na(p) | !is.na(Z))
 
@@ -51,44 +39,67 @@ data_clean_p <- data_clean %>%
 data_clean_z <- data_clean %>%
   filter(!is.na(Z))
 
+data_clean_t <- data %>%
+  filter(!is.na(t))
+
+#Run the z-curve data function on the p-values
 p_data <- zcurve_data(data_clean_p$p)
+
+#Extract the censored p-values
 p_censored <- p_data$censored
 
+#Run the zcurve data function on the t-test statistics
+t <- zcurve_data(data_clean_t$t)
+
+#Extract the necessary vectors from z-curve
 z <- data_clean_z$Z
 p <- p_data$precise
 p <- p$p
 
-#p <- p %>%
-  
+#Combine the p-values with the ones calculated from the t test statistics
+p <- c(p, t$precise$p)
 p.lb <- p_censored$p.lb
 p.ub <- p_censored$p.ub
 
+#Create a zcurve object with the inputs and use the EM method
 zcurve_obj <-zcurve(z = z, p = p, p.lb = p.lb, p.ub = p.ub, method="EM",
-                    bootstrap=100)
+                    bootstrap=500)
 
+#Use the base plot to see how it looks
 plot(zcurve_obj)
  
+#Create the summary table
 summary.zcurve(zcurve_obj)
 
+#Use the z-curve plotting function
+zcurve_plot <-plot.zcurve(zcurve_obj,
+                          #Scale the chart to the extrapolated area
+                          extrapolate = TRUE,
+                          #Add the annotation with the ODR, EDR, and ERR
+                          annotation = TRUE,
+                          #Add the CI
+                          CI=TRUE,
+                          #Make it a ggplot object so we can alter thematic
+                          #elements
+                          plot_type= 'ggplot')
 
-zcurve_plot <-plot.zcurve(zcurve_obj, extrapolate = TRUE, annotation = TRUE, CI=TRUE,
-            plot_type= 'ggplot')
-
+#Modify the plot for readability
 zcurve_plot <- zcurve_plot +
-  labs(caption="Nutrition Data")+
-  theme(plot.title=element_text(hjust=0.5))
+  
+  #Add appropriate labels and citations
+  labs(caption="Bartoš F, Schimmack U (2020). “zcurve: An R Package for Fitting Z-curves.” R package version 2.4.2",
+       x= "Z-Scores",
+       title="Z-Curve for Nutrition Research (2015-2023)",
+       subtitle="(EM via EM)")+
+  
+  #Adjust plot elements for neatness
+  theme(plot.title=element_text(hjust=0.5),
+        plot.subtitle= element_text(hjust = 0.5))
 
 #Display the plot
 zcurve_plot
-
 ```
 
-```{r}
 
 
-```
 
-```{r}
-
-
-```
