@@ -4,19 +4,17 @@ format: pdf
 editor: visual
 ---
 
-## Quarto
+## Setup:
 
 ```{r}
+#Load the appropriate libraries
 library(zcurve)
 library(dplyr)
 library(ggplot2)
-
-
 ```
 
-
+## Z-curve:
 ```{r, warning=FALSE}
-
 #Read in the data:
 data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
 
