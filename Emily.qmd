@@ -83,11 +83,11 @@ calc_z_from_ci <- data_clean %>%
   )
 data_clean_ci <- calc_z_from_ci %>% filter(!is.na(z_ci))
 
-#Combine original z-scored and the z-scores calculated from CIs
+#Combine original z-scores and the z-scores calculated from CIs
 z <- c(data_clean$Z[!is.na(data_clean$Z)],
        data_clean_ci$z_ci)
 
-#Create a zcurve object with the inputs and use the EM method
+#Create a z-curve object with the inputs and use the EM method
 zcurve_obj <-zcurve(z = z, 
                     p = p_values, 
                     p.lb = p_lb, 
