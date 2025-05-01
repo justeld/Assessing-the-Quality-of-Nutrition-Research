@@ -46,7 +46,7 @@ data_clean_p <- data_clean %>% filter(!is.na(p))
 data_clean_t <- data_clean %>% filter(!is.na(t))
 data_clean_chi <- data_clean %>% filter(!is.na(chi))
 
-#Empty vectors for precise p-values and censored p-values
+#Empty vectors for precise p-values and censored p-values bounds
 p_values <- c()
 p_lb <- c()
 p_ub <- c()
