@@ -79,7 +79,9 @@ calc_z_from_ci <- data_clean %>%
     !is.na(upper) & !is.na(lower) & !is.na(n)
   ) %>%
   mutate(
-    z_ci = ((upper+lower)/2) / ((upper-lower)/(2*1.96*sqrt(n)))
+    est = ((upper-lower)/2),
+    sd = ((upper - est)/2),
+    z_ci = sd/(sqrt(n)) 
   )
 data_clean_ci <- calc_z_from_ci %>% filter(!is.na(z_ci))
 
