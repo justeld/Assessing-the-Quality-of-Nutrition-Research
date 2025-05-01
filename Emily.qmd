@@ -1,88 +1,127 @@
 ---
 title: "Emily"
-author: ""
 format: pdf
 editor: source
-jupyter: python3
 ---
 
-This is Emily's file where she's testing testing testing. Emily only, no one else is allowed. 
+## Setup:
 
 ```{r}
-file.exists("C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf")
-getwd()
-
-pdf_file_path <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf"
-
-pdf_path_dir <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs"
+#Load the appropriate libraries
+library(zcurve)
+library(dplyr)
+library(ggplot2)
 ```
 
-```{r}
-# install.packages("pdftools")
-# install.packages("statcheck")
-# install.packages("tesseract")
-library(pdftools)
-library(statcheck)
-library(tesseract)
-```
-```{r}
+## Z-curve:
 
-pdf_file_path <- "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/nuijten2015.pdf"
+```{r, warning=FALSE}
+#Read in the data:
+data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
 
-text <- pdf_text(pdf_file_path)
-cleaned_text <- gsub("\\s+", " ", text)
+#Data cleaning
+data_clean <- data %>%
+  mutate( #Replace blank values with NA's
+    p = replace(p, p=="", NA),
+    Z = replace(Z, Z=="", NA),
+    t = replace(t, t=="", NA),
+    chi = replace(chi, chi=="", NA),
+    upper = replace(upper, upper=="", NA),
+    lower = replace(lower, lower=="", NA),
+    n = replace(n, n=="", NA)
+  ) %>%
+  mutate(
+    #Set these columns to be numeric
+    across(c(Z, upper, lower, n), ~ as.numeric(.)),
+    #Set test statistics to be a character
+    across(c(p, t, chi), ~ as.character(.))
+  )
 
-pdf_images <- pdf_convert(pdf_file_path, format = "png", pages = NULL)
-ocr_engine <- tesseract("eng")
+#Subsets for test stats
+data_clean_p <- data_clean %>% filter(!is.na(p))
+data_clean_t <- data_clean %>% filter(!is.na(t))
+data_clean_chi <- data_clean %>% filter(!is.na(chi))
 
-ocr_text_all <- lapply(pdf_images, function(image) {
-  ocr(image, engine = ocr_engine)
-})
-combined_ocr_text <- paste(ocr_text_all, collapse = "\n")
-cleaned_ocr_text <- gsub("\\s+", " ", ocr_text)
+#Empty vectors for precise p-values and censored p-values
+p_values <- c()
+p_lb <- c()
+p_ub <- c()
 
-```
-```{r}
-statcheck(cleaned_text)
-```
-```{r}
-statcheck(combined_ocr_text)
-statcheck(cleaned_ocr_text)
-```
+#Add p-values to vectors from raw p-values
+if(nrow(data_clean_p) > 0){ #Check if data has p-values to begin with
+  p_data <- zcurve_data(data_clean_p$p)
+  p_values <- c(p_values, p_data$precise$p)
+  p_lb <- c(p_lb, p_data$censored$p.lb)
+  p_ub <- c(p_ub, p_data$censored$p.ub)
+}
+#Add p-values to vectors from t-values
+if(nrow(data_clean_t) > 0){ #Check if data has t-values to begin with
+  t_data <- zcurve_data(data_clean_t$t)
+  p_values <- c(p_values, t_data$precise$p)
+  p_lb <- c(p_lb, t_data$censored$p.lb)
+  p_ub <- c(p_ub, t_data$censored$p.ub)
+}
+#Add p-values to vectors from chi-squared values
+if(nrow(data_clean_chi) > 0){ #Check if data has chi values to begin with
+  chi_data <- zcurve_data(data_clean_chi$chi)
+  p_values <- c(p_values, chi_data$precise$p)
+  p_lb <- c(p_lb, chi_data$censored$p.lb)
+  p_ub <- c(p_ub, chi_data$censored$p.ub)
+}
 
-```{r}
-# # install.packages("reticulate")
-# library(reticulate)
-# use_python("C:\\Users\\emily\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe")
-# # use_python("C:/Users/emily/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts")
-# ```
-# 
-# ```{python}
-# # pip install PyMuPDF
-# # pip install camelot-py
-# # pip install jupyter
-# 
-# "C:/Users/emily/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts"
-# 
-# import fitz
-# print("again")
-# 
-# def extract_text_from_pdf(pdf_path):
-#     doc = fitz.open(pdf_path)
-#     text = ""
-#     for page in doc:
-#         text += page.get_text()
-#     return text
-# 
-# # Path to the PDF file
-# pdf_path = "C:/Users/emily/OneDrive/Documents/GitHub/Assessing-the-Quality-of-Nutrition-Research/Test PDFs/Nkomo et al. - 2006 - Burden of valvular heart diseases a population-ba.pdf"
-# text = extract_text_from_pdf(pdf_path)
-# # Return the extracted text
-# print(text)
-# ```
-# ```{r}
-# library(stringr)
-# 
-# p_values <- str_extract_all(text, "p\\s*=\\s*[0-9\\.]+")
-# print(p_values)
+#Calculate z-scores from confidence intervals (and sample size)
+calc_z_from_ci <- data_clean %>% 
+  filter(
+    !is.na(upper) & !is.na(lower) & !is.na(n)
+  ) %>%
+  mutate(
+    z_ci = ((upper+lower)/2) / ((upper-lower)/(2*1.96*sqrt(n)))
+  )
+data_clean_ci <- calc_z_from_ci %>% filter(!is.na(z_ci))
+
+#Combine original z-scored and the z-scores calculated from CIs
+z <- c(data_clean$Z[!is.na(data_clean$Z)],
+       data_clean_ci$z_ci)
+
+#Create a zcurve object with the inputs and use the EM method
+zcurve_obj <-zcurve(z = z, 
+                    p = p_values, 
+                    p.lb = p_lb, 
+                    p.ub = p_ub, 
+                    method="EM",
+                    bootstrap=500)
+
+#Use the base plot to see how it looks
+plot(zcurve_obj)
+ 
+#Create the summary table
+summary.zcurve(zcurve_obj)
+
+#Use the z-curve plotting function
+zcurve_plot <-plot.zcurve(zcurve_obj,
+                          #Scale the chart to the extrapolated area
+                          extrapolate = TRUE,
+                          #Add the annotation with the ODR, EDR, and ERR
+                          annotation = TRUE,
+                          #Add the CI
+                          CI=TRUE,
+                          #Make it a ggplot object so we can alter thematic
+                          #elements
+                          plot_type= 'ggplot')
+
+#Modify the plot for readability
+zcurve_plot <- zcurve_plot +
+  
+  #Add appropriate labels and citations
+  labs(caption="Bartoš F, Schimmack U (2020). “zcurve: An R Package for Fitting Z-curves.” R package version 2.4.2",
+       x= "Z-Scores",
+       title="Z-Curve for Nutrition Research (2015-2023)",
+       subtitle="(EM via EM)")+
+  
+  #Adjust plot elements for neatness
+  theme(plot.title=element_text(hjust=0.5),
+        plot.subtitle= element_text(hjust = 0.5))
+
+#Display the plot
+zcurve_plot
 ```
