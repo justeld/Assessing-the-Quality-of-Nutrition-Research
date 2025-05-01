@@ -21,6 +21,10 @@ data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
 
 #Data cleaning
 data_clean <- data %>%
+  filter( #Remove rows that don't meet any of these conditions
+    (!is.na(z)) | (!is.na(p)) | (!is.na(t)) | (!is.na(chi)) | 
+      (((!is.na(upper)) & (!is.na(lower)) & (!is.na(n))))
+  ) %>%
   mutate( #Replace blank values with NA's
     p = replace(p, p=="", NA),
     Z = replace(Z, Z=="", NA),
