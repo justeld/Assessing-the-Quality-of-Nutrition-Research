@@ -1,0 +1,99 @@
+---
+format: pdf
+editor: source
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(tidyverse)
+```
+
+Warning: Caused by warning:! NAs introduced by coercion
+
+This warning does not affect our plot, as only columns with values are plotted
+
+```{r}
+data <- read.csv("z_curve_test_data/Z_curve_data_set.csv")
+
+data_clean <- data %>%
+  filter( #Remove rows that don't meet any of these conditions
+    (!is.na(z)) | (!is.na(p)) | (!is.na(t)) | (!is.na(chi)) | 
+      (((!is.na(Upper)) & (!is.na(Lower)) & (!is.na(n))))
+  ) %>%
+  mutate( #Replace blank values with NA's
+    p = replace(p, p=="", NA),
+    Z = replace(Z, Z=="", NA),
+    t = replace(t, t=="", NA),
+    chi = replace(chi, chi=="", NA),
+    Upper = replace(Upper, Upper=="", NA),
+    Lower = replace(Lower, Lower=="", NA),
+    n = replace(n, n=="", NA)
+  ) %>%
+  mutate(
+    #Set these columns to be numeric
+    across(c(Z, Upper, Lower, n), ~ as.numeric(.)),
+    #Set test statistics to be a character
+    across(c(p, t, chi), ~ as.character(.)))
+
+article_stats <- data_clean %>%
+  mutate(
+    has_p    = !is.na(p),
+    has_z    = !is.na(Z),
+    has_t    = !is.na(t),
+    has_chi  = !is.na(chi),
+    has_ci   = !is.na(Upper) & !is.na(Lower) & !is.na(n)
+  ) %>%
+  group_by(DOI) %>%
+  summarise(
+    p_count    = sum(has_p),
+    z_count    = sum(has_z),
+    t_count    = sum(has_t),
+    chi_count  = sum(has_chi),
+    ci_count   = sum(has_ci),
+    .groups = "drop"
+  ) %>%
+  filter(p_count + z_count + t_count + chi_count + ci_count > 0) %>%
+  mutate(Citation = row_number())
+
+article_stats_long <- article_stats %>%
+  pivot_longer(cols = ends_with("_count"), 
+               names_to = "Test", 
+               values_to = "Count") %>%
+  filter(Count > 0) %>%
+  mutate(Test = recode(Test,
+                       p_count = "p-value",
+                       z_count = "z-score",
+                       t_count = "t-statistic",
+                       chi_count = "chi-squared",
+                       ci_count = "CI-derived"))
+
+url_order <- article_stats_long %>%
+  group_by(Citation) %>%
+  summarise(total = sum(Count), .groups = "drop") %>%
+  arrange(desc(total)) %>%
+  pull(Citation)
+
+article_stats_long <- article_stats_long %>%
+  mutate(
+    Citation = factor(Citation, levels = url_order),
+    article_index = as.integer(factor(Citation, levels = url_order)))
+
+ggplot(article_stats_long, aes(x = article_index, 
+                               y = Count, 
+                               fill = Test)) +
+  geom_col(position = "identity", width = 0.7, alpha = 0.7) +
+  labs(title = "Test Statistics Reported per Article",
+       x = "Articles (Indexed)",
+       y = "Count of Test Statistics",
+       subtitle = "From Articles Containing Test Statistics Values") +
+  scale_x_continuous(
+    breaks = seq(1, max(article_stats_long$article_index), by = 10)) +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16 ),
+        plot.subtitle = element_text(hjust = 0.5, size = 10)) +
+  guides(fill = guide_legend(title = "Test Statistics Type"))
+
+ggsave("Test Statistics Distribution Plot.png", height=5,width=9)
+```
