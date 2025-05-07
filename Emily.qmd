@@ -17,26 +17,26 @@ library(ggplot2)
 
 ```{r, warning=FALSE}
 #Read in the data:
-data <- read.csv("z_curve_test_data/Z_curve_data_set_copy.csv")
+data <- read.csv("z_curve_test_data/Z_curve_data_set.csv")
 
 #Data cleaning
 data_clean <- data %>%
   filter( #Remove rows that don't meet any of these conditions
     (!is.na(z)) | (!is.na(p)) | (!is.na(t)) | (!is.na(chi)) | 
-      (((!is.na(upper)) & (!is.na(lower)) & (!is.na(n))))
+      (((!is.na(Upper)) & (!is.na(Lower)) & (!is.na(n))))
   ) %>%
   mutate( #Replace blank values with NA's
     p = replace(p, p=="", NA),
     Z = replace(Z, Z=="", NA),
     t = replace(t, t=="", NA),
     chi = replace(chi, chi=="", NA),
-    upper = replace(upper, upper=="", NA),
-    lower = replace(lower, lower=="", NA),
+    Upper = replace(Upper, Upper=="", NA),
+    Lower = replace(Lower, Lower=="", NA),
     n = replace(n, n=="", NA)
   ) %>%
   mutate(
     #Set these columns to be numeric
-    across(c(Z, upper, lower, n), ~ as.numeric(.)),
+    across(c(Z, Upper, Lower, n), ~ as.numeric(.)),
     #Set test statistics to be a character
     across(c(p, t, chi), ~ as.character(.))
   )
@@ -76,11 +76,11 @@ if(nrow(data_clean_chi) > 0){ #Check if data has chi values to begin with
 #Calculate z-scores from confidence intervals (and sample size)
 calc_z_from_ci <- data_clean %>% 
   filter(
-    !is.na(upper) & !is.na(lower) & !is.na(n)
+    !is.na(Upper) & !is.na(Lower) & !is.na(n)
   ) %>%
   mutate(
-    est = ((upper-lower)/2),
-    sd = ((upper - est)/2),
+    est = ((Upper-Lower)/2),
+    sd = ((Upper - est)/2),
     z_ci = sd/(sqrt(n)) 
   )
 data_clean_ci <- calc_z_from_ci %>% filter(!is.na(z_ci))
@@ -125,9 +125,12 @@ zcurve_plot <- zcurve_plot +
        subtitle="(EM via EM)")+
   
   #Adjust plot elements for neatness
-  theme(plot.title=element_text(hjust=0.5),
+  theme(plot.title=element_text(hjust=0.5, size=16),
         plot.subtitle= element_text(hjust = 0.5))
 
 #Display the plot
 zcurve_plot
+
+#Save the plot
+ggsave("Z-Curve Nutrition Research.png", height=5,width=9)
 ```
